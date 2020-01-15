@@ -31,7 +31,8 @@ module.exports = {
             })
 
         }
-        
+    
+        // Update, destroy exercicio opcional
         return response.json(dev);
     }
 };
