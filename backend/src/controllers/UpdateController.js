@@ -21,7 +21,7 @@ module.exports = {
                 break;
             }
             case 'location':{
-                const {latitude, longitude} = request.query;
+                const { latitude, longitude } = request.query;
                 devs.location.coordinates = [Number.parseFloat(longitude), Number.parseFloat(latitude)]
                 console.log(devs)
                 devs.save()
@@ -36,5 +36,3 @@ module.exports = {
         return response.json({devs})
     }
 }
-
-// Incompleto
