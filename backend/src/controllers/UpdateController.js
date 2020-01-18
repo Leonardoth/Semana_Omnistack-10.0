@@ -3,9 +3,6 @@ const parseStringAsArray = require('../utils/parseStringAsArray')
 
 module.exports = {
     async update(request, response) {
-        // user: balbuquerque
-        // change, bio, blablabla
-        // params : add, remove, change
         const { github_username, field, value } = request.query;
         const devs = await Dev.findOne({
             github_username
