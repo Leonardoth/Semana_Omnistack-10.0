@@ -6,6 +6,7 @@ import './Main.css';
 import api from './services/api'
 import DevItem from './components/DevItem'
 import DevForm from './components/DevForm'
+import DevSearch from './components/DevSearch'
 
 // No React se usa 'htmlFor' e 'className' ao inves de for e class, pois no Js essas palavras são reservadas.
 
@@ -35,7 +36,14 @@ function App() {
     setDevs([...devs, response.data]);
 }
 
-
+async function searchDev(data){
+  const response = await api.get(`/search?github_username=${data.searchText}`)
+  console.log(response.data)
+  if(!response.data){
+    return setDevs([])
+  }
+  setDevs([response.data])
+}
 
   return (
     <div id="app">
@@ -44,6 +52,9 @@ function App() {
           <DevForm onSubmit={handleAddDev}/>
     </aside>
     <main>
+      <div className="search">
+        <DevSearch onSubmit={searchDev}/>
+      </div>
       <ul>
         {devs.map(dev => (
           <DevItem key= {dev._id} dev={dev}/>

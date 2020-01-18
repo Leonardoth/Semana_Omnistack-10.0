@@ -1,0 +1,28 @@
+
+/* Desafio pessoal */
+.search {
+    height: relative;
+    width: 100%;
+    text-align:center;
+    display:inline-block;
+}
+.search input{
+    margin-bottom: 10px;
+    width:75%;
+    text-align:center;
+    display: inline-block;
+    /* debug */
+    color:black;
+    background-color: rgb(255, 255, 255);
+}
+
+.search input:focus{
+    border-width: 3px;
+    border-color:#6931ca;
+}
+.search button{
+    width:50px;
+    height:20px;
+}
+
+/* Ainda falta um media query, ao diminuir o zoom para 25%, 'Search' ultrapassa os limites do botão. */
