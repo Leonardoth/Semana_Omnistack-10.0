@@ -8,9 +8,8 @@ import DevItem from './components/DevItem'
 import DevForm from './components/DevForm'
 import DevSearch from './components/DevSearch'
 
-// No React se usa 'htmlFor' e 'className' ao inves de for e class, pois no Js essas palavras são reservadas.
 
-// Desafio: Criar update e destroy no frontend, com botões específicos.
+
 // Desafio pessoal: criar uma barra de search para filtrar os devs.
 
 
