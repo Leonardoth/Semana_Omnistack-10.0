@@ -35,3 +35,28 @@ li.dev-item header img{
 li.dev-item header .user-info{
     margin-left: 10px;
 }
+
+
+/* Buttons desafio */
+
+
+.buttons{
+    position:relative;
+    margin-top:10%;
+}
+.left{
+    position:absolute;
+    left:0;
+    bottom:0;
+    /* float:left;
+    padding:5px;
+    text-align:left; */
+}
+.right{
+    position:absolute;
+    right:0;
+    bottom:0;
+    /* float:right;
+    padding:5px;
+    text-align:right; */
+}
