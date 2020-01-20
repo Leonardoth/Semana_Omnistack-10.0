@@ -11,16 +11,21 @@ function DevItem({dev}){
               <span> {dev.techs.join(', ')}</span>
             </div>
           </header>
+          <div className="main">
+
             <p>{dev.bio}</p>
             <a href={`https://github.com/${dev.github_username}`}> Perfil do github </a>
-            <div className="buttons">
-              <div className="left">
-                <button>Edit Profile</button>
-              </div>
-              <div className="right">
-                <button>Delete</button>
+            <div className="button_container">
+              <div className="buttons">
+                <div className="left">
+                  <button>Edit Profile</button>
+                </div>
+                <div className="right">
+                  <button>Delete</button>
+                </div>
               </div>
             </div>
+          </div>
     </li>)
 }
 

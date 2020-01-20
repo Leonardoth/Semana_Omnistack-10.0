@@ -3,6 +3,7 @@ li.dev-item p {
     font-size: 14px;
     line-height: 20px;
     margin: 10px 0;
+    min-height: 40px;
 }
 
 li.dev-item a {
@@ -39,9 +40,16 @@ li.dev-item header .user-info{
 
 /* Buttons desafio */
 
-
-.buttons{
+.button_container{
     position:relative;
+    margin-top:10%;
+}
+.buttons{
+    position:absolute;
+    display:inline-block;
+    bottom:0;
+    width:100%;
+    background-color:white;
     margin-top:10%;
 }
 .left{
