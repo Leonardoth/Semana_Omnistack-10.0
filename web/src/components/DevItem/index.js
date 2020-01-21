@@ -1,7 +1,14 @@
 import React from 'react';
 import './styles.css';
+import api from '../../services/api'
 
 function DevItem({dev}){
+    async function deleteDev(){
+      await api.get(`/destroy?github_username=${dev.github_username}`)
+      alert(`Usuário ${dev.github_username} deletado com sucesso.`)
+      window.location.reload()
+    }
+
     return (
     <li key={dev._id} className="dev-item">
           <header>
@@ -21,7 +28,7 @@ function DevItem({dev}){
                   <button>Edit Profile</button>
                 </div>
                 <div className="right">
-                  <button>Delete</button>
+                  <button onClick={deleteDev}>Delete</button>
                 </div>
               </div>
             </div>
